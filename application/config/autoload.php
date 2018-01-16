@@ -59,14 +59,11 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 $autoload['libraries'] = [
-	"aws",
 	"database",
 	"encryption",
 	"form_validation",
-	"migration",
 	"session",
-	"upload",
-	"utilities"
+	"upload"
 ];
 
 /*
@@ -98,7 +95,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+$autoload['helper'] = array('url');
 
 /*
 | -------------------------------------------------------------------
@@ -144,5 +141,6 @@ $autoload['language'] = array();
 $autoload['model'] = [
 	"Post_Model" => "post",
 	"Comment_Model" => "comment",
-	"User_Model" => "user"
+	"User_Model" => "user",
+	"RolePermission_Model" => "role_permission"
 ];
