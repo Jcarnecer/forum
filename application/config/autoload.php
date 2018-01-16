@@ -58,7 +58,16 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = [
+	"aws",
+	"database",
+	"encryption",
+	"form_validation",
+	"migration",
+	"session",
+	"upload",
+	"utilities"
+];
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +141,8 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = [
+	"Post_Model" => "post",
+	"Comment_Model" => "comment",
+	"User_Model" => "user"
+];
