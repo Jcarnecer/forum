@@ -12,6 +12,13 @@
 				<span>Dashboard</span>
 			</a>
 		</li>
+        <li class="">
+            <a class="" href="<?= base_url('/') ?>">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span>Search</span>
+            </a>
+        </li>
+		
 	</ul>
 	<!-- sidebar menu end-->
 </div>
@@ -40,3 +47,6 @@
 			
 		</nav>
 	</div>
+    <div class="inner-content h-100"></div>
+	
+	
