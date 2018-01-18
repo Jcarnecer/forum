@@ -1,10 +1,8 @@
 
-<div class="container-fluid">
-
+<div class="container">
     <div class="row">
-
         <!-- Forum Entries Column -->
-        <div class="col-md-8">
+        <div class="col-md-12">
            <div class="card">
                    <!-- First Forum Post -->
                    <h2 class="card-header">
@@ -46,30 +44,6 @@
             
         </div>
         <br>
-        
-        <div class="col-md-4">
-            <div class="card">
-                <!-- First Forum Post -->
-                <h2 class="card-header">
-                    <div class="profile-header">
-                        <span><i class="fa fa-user-circle post-avatar" aria-hidden="true"></i></span>
-                        <p class="d-inline-block"><?= $user->first_name . " " . $user->last_name ?></p>
-                    </div>
-                </h2>
-                <form method="post">
-                    <div class="card-block text-center">
-                        <h3 class="card-title">Write Something</h3>
-                        <div class="post-message">
-                            <textarea class="form-control" id="message" rows="25" placeholder="Message Text..."></textarea>
-                        </div>                    
-
-                    </div>
-                    <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Submit</a>
-                    </div>
-                </form>
-        </div>
-
     </div>
     <!-- /.row -->
 
