@@ -36,18 +36,12 @@ class PostController extends BaseController
 	public function get_company_posts()
 	{
 		$data = [];
-		if (parent::can_user("USER_LIST")) {
-			$current_user = parent::current_user();
-			foreach ($this->post->get_many_by(["company_id" => $current_user->company_id]) as $post) {
-				$post["author"] = $current_user->first_name . ' ' . $current_user->last_name;
-				unset($post["user_id"]);
-				unset($post["deleted"]);
-				$data[] = $post;
-			}
-		} else {
-			$data["error"] = [
-				"message" => "Requires authentication"
-			];
+		$current_user = parent::current_user();
+		foreach ($this->post->get_many_by(["company_id" => $current_user->company_id]) as $post) {
+			$post["author"] = $current_user->first_name . ' ' . $current_user->last_name;
+			unset($post["user_id"]);
+			unset($post["deleted"]);
+			$data[] = $post;
 		}
 		return $this->output->set_output(json_encode(['data' => $data]));
 	}
