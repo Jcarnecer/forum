@@ -15,10 +15,12 @@ class PostController extends BaseController
 		return parent::main_page("post/index");
 	}
     
-    public function view($post_id) {
-        $data = $this->post->get($post_id);
-        return parent::mainpage("post/view", $data);
-    }
+    public function view($post_id=null) {
+        // $data = $this->post->get($post_id);
+        return parent::main_page("post/view");
+	}
+
+	
 
 	public function create() {
 		$post_details = [
