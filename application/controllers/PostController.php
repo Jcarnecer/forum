@@ -42,7 +42,6 @@ class PostController extends BaseController
         	unset($comment['user_id']);
         	$data['thread']['comment'][$key] = $comment;
         }
-        // print_r($data['thread']['comment']);
 
         return parent::main_page("post/view", $data);
 	}
@@ -59,9 +58,9 @@ class PostController extends BaseController
 			'user_id' => parent::current_user()->id,
 			'company_id' => parent::current_user()->company_id
 		];
-		$this->post->insert($data);
+		$id = $this->post->insert($data);
 		// echo("Successfully created");
-		return parent::main_page("post/create");
+		return redirect("post/view/" . $id);
 	}
 
 	public function delete() {

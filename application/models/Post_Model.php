@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Post_Model extends BaseModel {
 
 	public $belongs_to = ['user'];
-	public $has_many = ['comment' => ['model'=> 'Comment_model', 'primary_key' => 'post_id']];
+	public $has_many = ['comment' => ['model'=> 'Comment_model', 'primary_key' => 'thread_id']];
 	public $before_create = ['created_at', 'updated_at'];
 	public $before_update =['updated_at'];
 	public $title;
@@ -15,7 +15,7 @@ class Post_Model extends BaseModel {
 
 	protected $soft_delete = TRUE;
 
-	public $_table = "forum_posts";
+	public $_table = "forum_threads";
 
 	public function __construct() {
 		parent::__construct();
