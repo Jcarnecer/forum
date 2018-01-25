@@ -16,12 +16,21 @@
 
                 <div class="card-body">
                     <div class="list-group-flush">
-                        <?php foreach($threads as $thread): ?>
+                        <?php 
+                            if(isset($threads))
+                                foreach($threads as $thread):
+                        ?>
                         <a href="<?= base_url('post/view/'. $thread['id']) ?>" class="list-group-item list-group-item-action">
                             <span class="d-inline-block"><?= $thread['title'] ?></span>
                             <span class="d-inline-block float-right text-muted time-line">Post Replies Time</span>
                         </a>
-                        <?php endforeach; ?>
+                        <?php endforeach;
+                            else {
+                        ?>
+                            <a class="list-group-item list-group-item-action">
+                                <span class="d-inline-block"> No available thread.</span>
+                            </a>
+                        <?php } ?>
                     </div>
 
                 </div>
