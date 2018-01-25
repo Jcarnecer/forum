@@ -4,7 +4,7 @@
             <div class="card space-between">
                 <h2 class="card-header">
                     <div class="profile-header">
-                        <h5 class="d-inline-block"><?= $thread['author'] ?></h5><br>
+                        <p class="d-inline-block"><?= $thread['author'] ?></p><br>
                             <p class="text-muted"><?= $thread['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
 
                     </div>
@@ -16,9 +16,11 @@
                         </div>
                         <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
                             <h1><?= $thread['title'] ?></h1>
-                            <p class="forum-content">
-                                <?= $thread['body'] ?>
-                            </p>
+                            <div class="container">
+                                <p class="forum-content">
+                                    <?= $thread['body'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>                    
                 </div>
@@ -30,7 +32,7 @@
             <div class="card space-between">
                 <h2 class="card-header">
                     <div class="profile-header">
-                        <h5 class="d-inline-block"><?= $comment['author'] ?></h5><br>
+                    <p class="d-inline-block"><?= $thread['author'] ?></p><br>
                             <p class="text-muted"><?= $comment['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
 
                     </div>
@@ -65,7 +67,7 @@
                 <div class="card-block page-wrapper">
                         <form action="post/reply/<?=$thread['id']?>" method="POST" role="form" class="message">
                             <textarea name="body" class="form-control" id="reply-system" rows="3"></textarea>
-                            <button type="submit" value="Post Reply" class="btn btn-primary float-right" style="margin-top: 10px;"><span> <i class="fa fa-paper-plane" aria-hidden="true"></i></span> Post Reply</button>
+                            <button type="submit" value="Post Reply" class="btn btn-primary btn-reply float-right" style="margin-top: 10px;"><span> <i class="fa fa-paper-plane" aria-hidden="true"></i></span> Post Reply</button>
                         </form>
                     </div>
                 </div>

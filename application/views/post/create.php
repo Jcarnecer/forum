@@ -13,7 +13,7 @@
                     </div>
                     <hr>
                     <div class="page-wrapper">
-                        <textarea name="body" class="form-control"></textarea>
+                        <textarea name="body" class="form-control" placeholder="Your Message" id="reply-system"></textarea>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-primary float-right">
                 </form>              
