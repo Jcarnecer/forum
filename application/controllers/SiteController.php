@@ -21,7 +21,7 @@ class SiteController extends BaseController
 			$data['posts'][] = $post;
 		}
 		if (parent::current_user()) {
-			parent::main_page("dashboard", $data);
+			parent::main_page("dashboard");
 		} else {
 			if (ENVIRONMENT === "production")
 				redirect('http://payakapps.com');
