@@ -73,7 +73,7 @@ class PostController extends BaseController
 		$data = [
 			'body' => $this->input->post('body'),
 			'user_id' => parent::current_user()->id,
-			'post_id' => $id
+			'thread_id' => $id
 		];
 		$this->comment->insert($data);
 
