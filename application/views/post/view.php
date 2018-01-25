@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2 text-center">
-                            <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-5" aria-hidden="true"></i></span>
+                            <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-3" aria-hidden="true"></i></span>
                         </div>
                         <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
                             <h1><?= $thread['title'] ?></h1>
@@ -40,7 +40,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2 text-center">
-                            <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-5" aria-hidden="true"></i></span>
+                            <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-3" aria-hidden="true"></i></span>
                         </div>
                         <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
                             <p class="forum-content">
