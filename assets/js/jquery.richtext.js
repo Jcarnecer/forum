@@ -24,7 +24,7 @@
             heading: true,
 
             // fonts
-            fonts: true,
+            fonts: false,
             fontList: ["Arial", 
                     "Arial Black", 
                     "Comic Sans MS", 
@@ -38,24 +38,24 @@
                     "Times New Roman",
                     "Verdana"
                     ],
-            fontColor: true,
+            fontColor: false,
 
             // uploads
-            imageUpload: true,
-            fileUpload: true,
+            imageUpload: false,
+            fileUpload: false,
 
             // media
-            videoEmbed: true,
+            videoEmbed: false,
 
             // link
-            urls: true,
+            urls: false,
 
             // tables
-            table: true,
+            table: false,
 
             // code
-            removeStyles: true,
-            code: true,
+            removeStyles: false,
+            code: false,
 
             // colors
             colors: [],

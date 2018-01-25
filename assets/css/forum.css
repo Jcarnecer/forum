@@ -9,17 +9,13 @@
     padding-right: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .main-content {
     max-height: 100%;
     height: 100%;
     overflow: hidden;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .space-between{

@@ -39,7 +39,7 @@
                 <a class="btn btn-primary btn-reply float-right" href="#reply"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Post a Forum</a>
             </div>
             
-            <!-- Post Form -->
+      
         </div>
     <!-- /.row -->
 
