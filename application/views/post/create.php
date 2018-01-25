@@ -3,30 +3,27 @@
         <div class="col-md-12">
             <div class="card space-between">
                 <h2 class="card-header">
-                     <p class="d-inline-block message-header">Your Message</p>
+                     <p class="d-inline-block message-header">New Thread    </p>
                 </h2>
                 <div class="card-block title-wrapper">
-                    <form action="" class="message">
-                         <p style="font-size: 20px; font-weight: bold;">Title: </p>
+                    <form action="post/create" method="POST" class="message">
                          <div class="form-group comment-form">
-                            <input class="content1" id="comment-system" rows="1"></input>
+                            <input type="text" name="title" placeholder="Title" class="form-control"></input>
                          </div>
-                    </form>
-                </div>
-                <hr>
-                <div class="page-wrapper">
-                    <textarea class="content"></textarea>
-                </div>
-                <a class="btn btn-primary btn-reply float-right" href="#reply"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Post Forum</a>
-               
+                    </div>
+                    <hr>
+                    <div class="page-wrapper">
+                        <textarea name="body" class="form-control"></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-primary float-right">
+                </form>              
             </div>
         </div>
 
         <script>
         $(document).ready(function() {
             $('.content').richText();
-            $('.conent1').richText();
-        
+            $('.richText-editor').html();
         });
         </script>
             

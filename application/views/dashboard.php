@@ -1,45 +1,61 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
-            <div class="card space-between">
-                <div class="card-header">
-                    <div class="d-flex justify-content-end">
-                        <div class="mr-auto p-2">
-                            <a href="" class="title-header">Title Forum</a>
-                        </div>
-                        <div class="p-2">Posts</div>
-                        <div class="p-2">Replies</div>
-                        <div class="p-2">Time</div>
-                    </div>
-
-                </div>
-
-                <div class="card-body">
-                    <div class="list-group-flush">
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <span class="d-inline-block">Forum Mo to</span>
-                            <span class="d-inline-block float-right text-muted time-line">Post Replies Time</span>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <span class="d-inline-block">Forum Mo to</span>
-                            <span class="d-inline-block float-right text-muted">Post Replies Time</span>
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <span class="d-inline-block">Forum Mo t o</span>
-                            <span class="d-inline-block float-right text-muted">Post Replies Time</span>
-                        </a>
-                    </div>
-
-                </div>
-                
-                <div class="card-footer">
-                    <a href="">More about this Forum <span><i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </span> </a>   
-                </div> 
-                <a class="btn btn-primary btn-reply float-right" href="#reply"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Post a Forum</a>
-            </div>
-            
-      
+        <div class="col-md-8">
+            <form action="post/create" method="POST">
+                Title: <input type="text" name="title" placeholder="Title" class="form-control">
+                Body: <textarea name="body" placeholder="Body" class="form-control"></textarea>
+                <input type="submit" value="Submit" class="form-control">
+            </form>
         </div>
-    <!-- /.row -->
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-8">
+            <form action="post/delete" method="POST">
+                <input type="number" name="id" class="form-control">
+                <input type="submit" value="submit" class="form-control">
+            </form>
+        </div>
+    </div>
+</div>
 
+<div class="container-fluid mt-3 mb-3">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table table-bordered table-hover" id="usersTbl"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.3/css/select.bootstrap4.min.css" />
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/select/1.2.3/js/dataTables.select.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        var usersTbl;
+        var updateUserBtn;
+
+        function init() {
+            updateUserBtn = $("#updateUserBtn");
+
+            usersTbl = $("#usersTbl").DataTable({
+                ajax: 'post/get',
+                columns: [
+                    { title: "Title", data: "title" },
+                    { title: "Body", data: "body" },
+                    { title: "Author", data: "author" },
+                    { title: "Date Created", data: "created_at" }
+                ]
+            });
+        }
+
+        init();
+    })();
+</script>
