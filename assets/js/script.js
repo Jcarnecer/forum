@@ -1,10 +1,4 @@
-var baseUrl;
-
-if (window.location.origin === "http://payakapps.com") {
-    baseUrl = "http://payakapps.com";
-} else {
-    baseUrl = "http://localhost/main";
-}
+const baseUrl = window.location.origin === "http://forum.payakapps.com" ? "http://forum.payakapps.com" : "http://localhost/forum";
 
 var apiUrl = baseUrl + "/api/dev";
 
