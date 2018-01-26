@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+}
 
 .inner-content{
     padding-right: 30px;
@@ -203,3 +208,10 @@ textarea {
     box-shadow: 0 0 20px 0 #999;
 } */
 
+.inner-content {
+    background: #ffffff;
+    margin-top: -20px;
+    max-height: calc(100% - 54.76px);
+    height: calc(100% - 54.76px);
+    overflow: hidden;
+}

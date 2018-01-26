@@ -23,12 +23,12 @@
         
         <li class="sub-menu">
             <a data-toggle="collapse" href="#UIElementsSub1" aria-expanded="false" aria-controls="UIElementsSub1" >
-                <i class="fa fa-users" aria-hidden="true"></i>
+                <i class="fa fa-folder" aria-hidden="true"></i>
                 <span>Projects</span>
             </a>
             <ul class="sub collapse" id="UIElementsSub1">
                 <?php foreach($projects as $project_instance): ?>
-                <li><a href="<?= base_url('project/' . $project_instance['id']); ?>"><i class="fa fa-users"></i> <?=$project_instance['name']?></a></li>
+                <li><a href="<?= base_url('project/' . $project_instance['id']); ?>"><i class="fa fa-file"></i> <?=$project_instance['name']?></a></li>
                 <?php endforeach; ?>
                 <li>
                     <a class="team-create" href="#teamModifyModal" data-toggle="modal"><i class="fa fa-plus" aria-hidden="true"></i> Add Project</a>
@@ -46,31 +46,30 @@
 
 </div>
 <!-- end sidebar -->
-<div class="main-content">
-	<div class="topbar">
-		<nav class="navbar navbar-custom navbar-expand-lg d-flex">
-			<div id="nav-icon-open" class="custom-toggle hidden-toggle">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<a class="navbar-brand" href="#">PayakApps</a>
-			<ul class="navbar-nav flex-row ml-auto">
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-						<?= $user->first_name . " " . $user->last_name ?>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a class="dropdown-item" href="<?= base_url('users/profile') ?>">My Profile</a>
-						<a class="dropdown-item" href="<?= base_url("users/profile/change-password") ?>">My Password</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="<?= base_url("users/logout") ?>">Logout</a>
-					</div>
-				</li>
-			</ul>
-			
-		</nav>
-	</div>
-    <div class="inner-content h-100"></div>
-	
-	
+<div class="main-content h-100">
+
+    <div class="topbar">
+        <nav class="navbar navbar-custom clearfix">
+            <div id="nav-icon-open" class="custom-toggle hidden-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <a class="navbar-brand font-weight-bold text-uppercase" href="<?= base_url('tasks'); ?>">
+                <?= $project['name'] ?>
+            </a>
+            
+            <span class="ml-auto">
+                <a href="#" data-toggle="popover" data-placement="bottom"  data-content="<?= $user->email_address ?>" data-trigger="hover">
+                    <img class="img-avatar mr-2" src="<?= $user->avatar_url ?>"><?= $user->first_name.' '.$user->last_name ?>
+                </a>
+            </span>
+        </nav>
+    </div>
+    
+    <div class="inner-content d-flex flex-column p-0">
+        <div class="d-flex w-100">
+            <a href="http://localhost/task/project/<?= $project['id'] ?>" class="btn btn-lg btn-primary w-50 rounded-0"><i class="fa fa-tasks"></i> Tasks</a>
+            <a href="http://localhost/forum/project/<?= $project['id'] ?>" onclick="javascript:void(0)" class="btn btn-lg btn-primary active w-50 rounded-0"><i class="fa fa-exchange-alt"></i> Forum</a>
+        </div>

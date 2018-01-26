@@ -16,6 +16,7 @@ class BaseController extends CI_Controller {
 	) {
 		$user = $this->current_user();
 		$sidebar['user'] = $user;
+		$sidebar['project'] = $data['project'];
 		foreach ($this->member->with('project')->get_many_by(["user_id" => $user->id]) as $project) {
 			unset($project['project']['admin']);
 			unset($project['project']['company_id']);
