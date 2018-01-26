@@ -28,7 +28,10 @@
                     <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
                 </div>
             </div>     
-            <?php foreach ($thread['comment'] as $comment): ?>
+            <?php 
+                if(isset($thread['reply']))
+                foreach ($thread['reply'] as $comment): 
+            ?>
             <div class="card space-between">
                 <h2 class="card-header">
                     <div class="profile-header">

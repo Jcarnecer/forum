@@ -12,7 +12,7 @@ class SiteController extends BaseController
 
 	public function index()
 	{
-		foreach ($this->post->with('user')->get_many_by(["company_id" => parent::current_user()->company_id]) as $post) {
+		foreach ($this->thread->with('user')->get_all() as $post) {
 			$post["author"] = $post["user"]["first_name"] . ' ' . $post["user"]["last_name"];
 			unset($post["user_id"]);
 			unset($post["deleted"]);

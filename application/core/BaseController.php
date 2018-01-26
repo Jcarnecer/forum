@@ -15,9 +15,14 @@ class BaseController extends CI_Controller {
 		$title = "PayakApps"
 	) {
 		$user = $this->current_user();
-
+		$sidebar['user'] = $user;
+		foreach ($this->member->with('project')->get_many_by(["user_id" => $user->id]) as $project) {
+			unset($project['project']['admin']);
+			unset($project['project']['company_id']);
+			$sidebar['projects'][] = $project['project'];
+		}
 		$this->load->view("partials/header", ["title" => $title]);
-		$this->load->view("partials/sidebar", ["user" => $user]);
+		$this->load->view("partials/sidebar", $sidebar);
 		$this->load->view($view, $data);
 		$this->load->view("partials/footer");
 	}
