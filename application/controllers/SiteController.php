@@ -24,10 +24,7 @@ class SiteController extends BaseController
 			parent::main_page("dashboard");
 			redirect('post');
 		} else {
-			if (ENVIRONMENT === "production")
-				redirect('http://payakapps.com');
-			else
-				redirect('http://localhost/main');
+			redirect(LOGIN_URL);
 		}
 	}
 }
