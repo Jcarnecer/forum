@@ -14,6 +14,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/forum.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/richtext.min.css"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 		<script src="assets/js/jquery.js"></script>
 		<script src="assets/js/jquery.richtext.js"></script>	

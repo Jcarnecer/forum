@@ -1,14 +1,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card space-between">
-                <h2 class="card-header">
+            <div class="card space-between w3-card-4">
+                <div class="card-header">
                     <div class="profile-header">
                         <p class="d-inline-block"><?= $thread['author'] ?></p><br>
                             <p class="text-muted"><?= $thread['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
 
                     </div>
-                </h2>
+                </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2 text-center">
@@ -27,16 +27,16 @@
                 <div class="card-footer">
                     <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
                 </div>
-            </div>     
+            </div> 
+
             <?php foreach ($thread['comment'] as $comment): ?>
-            <div class="card space-between">
-                <h2 class="card-header">
+            <div class="card space-between w3-card-4">
+                <div class="card-header">
                     <div class="profile-header">
                     <p class="d-inline-block"><?= $thread['author'] ?></p><br>
                             <p class="text-muted"><?= $comment['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
-
                     </div>
-                </h2>
+                </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2 text-center">
@@ -58,7 +58,7 @@
 
 
             <!-- Comments Form -->
-            <div class="card space-between" id="reply">
+            <div class="card space-between w3-card-4" id="reply">
                 <div class="card-header">
                     <div class="leave-reply">
                         <p class="d-inline-block">Leave a Reply</p>

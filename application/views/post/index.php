@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card space-between">
+            <div class="card space-between w3-card-4">
                 <div class="card-header">
                     <div class="d-flex justify-content-end">
                         <div class="mr-auto p-2">
@@ -36,7 +36,7 @@
                 </div>
                 
                 <div class="card-footer">
-                    <a class="btn btn-primary float-right" href="<?= base_url('post/create') ?>"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Create New Thread</a>
+                    <a class="btn btn-primary btn-submit float-right" href="<?= base_url('post/create') ?>"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Create New Thread</a>
                 </div> 
             </div>
             

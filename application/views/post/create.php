@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="card space-between">
-                <h2 class="card-header">
+            <div class="card space-between w3-card-4">
+                <div class="card-header">
                      <p class="d-inline-block message-header">New Thread    </p>
-                </h2>
+                </div>
                 <div class="card-block title-wrapper">
                     <form action="post/create" method="POST" class="message">
                          <div class="form-group comment-form">
@@ -13,9 +13,9 @@
                     </div>
                     <hr>
                     <div class="page-wrapper">
-                        <textarea name="body" class="form-control" placeholder="Your Message" id="reply-system"></textarea>
+                        <textarea name="body" class="form-control" placeholder="Your Message" row="10" id="create-post"></textarea>
                     </div>
-                    <input type="submit" value="Submit" class="btn btn-primary float-right">
+                    <input type="submit" value="Submit" class="btn btn-primary btn-submit float-right">
                 </form>              
             </div>
         </div>
