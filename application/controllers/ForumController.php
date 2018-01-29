@@ -21,7 +21,7 @@ class ForumController extends BaseController
 		$project = $this->project->get($id);
 		$this->session->set_userdata(['project' => $project]);
 
-		return parent::main_page("post/index", $data);
+		return parent::main_page("post/index", $data ?? null);
 	}
     
 
