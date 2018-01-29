@@ -73,3 +73,4 @@
             <a href="http://localhost/task/project/<?= $project['id'] ?>" class="btn btn-lg btn-primary w-50 rounded-0"><i class="fa fa-tasks"></i> Tasks</a>
             <a href="http://localhost/forum/project/<?= $project['id'] ?>" onclick="javascript:void(0)" class="btn btn-lg btn-primary active w-50 rounded-0"><i class="fa fa-exchange-alt"></i> Forum</a>
         </div>
+        <div class="h-100 w-100" style="overflow-y: auto;">

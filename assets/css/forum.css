@@ -11,10 +11,15 @@ html, body{
 }
 
 .inner-content{
-    padding-right: 30px;
+    background: #ffffff;
+    margin-top: -20px;
+    max-height: calc(100% - 49px);
+    height: calc(100% - 49px);
+    overflow: hidden;
+    /* padding-right: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
-    overflow-y: auto;
+    overflow-y: auto; */
 }
 
 .main-content {
@@ -209,9 +214,5 @@ textarea {
 } */
 
 .inner-content {
-    background: #ffffff;
-    margin-top: -20px;
-    max-height: calc(100% - 54.76px);
-    height: calc(100% - 54.76px);
-    overflow: hidden;
+    
 }
