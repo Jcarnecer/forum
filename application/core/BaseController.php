@@ -16,7 +16,7 @@ class BaseController extends CI_Controller {
 	) {
 		$user = $this->current_user();
 		$sidebar['user'] = $user;
-		$sidebar['project'] = $data['project'];
+		$sidebar['project'] = $this->session->project;
 		foreach ($this->member->with('project')->get_many_by(["user_id" => $user->id]) as $project) {
 			unset($project['project']['admin']);
 			unset($project['project']['company_id']);
@@ -24,7 +24,7 @@ class BaseController extends CI_Controller {
 		}
 		$this->load->view("partials/header", ["title" => $title]);
 		$this->load->view("partials/sidebar", $sidebar);
-		$this->load->view($view, $data);
+		$this->load->view($view, $data ?? null);
 		$this->load->view("partials/footer");
 	}
 

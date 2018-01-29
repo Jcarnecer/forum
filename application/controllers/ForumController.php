@@ -19,7 +19,7 @@ class ForumController extends BaseController
 			$data['threads'][]=$thread;
 		}
 		$project = $this->project->get($id);
-		$data['project'] = $project;
+		$this->session->set_userdata(['project' => $project]);
 		return parent::main_page("post/index", $data);
 	}
     
