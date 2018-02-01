@@ -25,7 +25,11 @@
                         </div>                    
                     </div>
                     <div class="card-footer footer-reply">
-                        <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
+                        <div class="d-flex flex-wrap w-100 p-0 m-0">
+                            <a href="#" class="btn btn-primary btn-like w-25 rounded-0 border border-top-0 border-bottom-0 border-left-0"><i class="far fa-thumbs-up"></i> Like</a>
+                            <a class="btn btn-primary btn-reply w-50 rounded-0 " href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                            <a href="" class="btn btn-primary btn-reply w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0"><i class="far fa-thumbs-down"></i> Dislike</a>
+                        </div>
                     </div>
                 </div> 
 
@@ -53,7 +57,11 @@
                             </div>                    
                         </div>
                         <div class="card-footer footer-reply">
-                            <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
+                            <div class="d-flex flex-wrap w-100 p-0 m-0">
+                                <a href="#" class="btn btn-primary btn-like w-25 rounded-0 border border-top-0 border-bottom-0 border-left-0"><i class="far fa-thumbs-up"></i> Like</a>
+                                <a class="btn btn-primary btn-reply w-50 rounded-0 " href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                                <a href="#" class="btn btn-primary btn-reply w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0"><i class="far fa-thumbs-down"></i> Dislike</a>
+                            </div>
                         </div>
                     </div> 
                 <?php endforeach; ?>
@@ -69,8 +77,8 @@
                     </div>
                     <div class="card-block reply-wrapper">
                             <form action="post/reply/<?=$thread['id']?>" method="POST" role="form" class="message">
-                                <textarea name="body" class="form-control" id="reply-system" rows="10"></textarea>
-                                <button type="submit" value="Post Reply" class="btn btn-primary btn-reply float-right" style="margin: 10px;"><span> <i class="fa fa-paper-plane" aria-hidden="true"></i></span> Post Reply</button>
+                                <textarea name="body" class="form-control" id="reply-system" rows="10" placeholder="Message..."></textarea>
+                                <button type="submit" value="Post Reply" class="btn btn-primary btn-reply  w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0 float-right" style="margin: 10px;"><span> <i class="far fa-paper-plane" aria-hidden="true"></i></span> Post Reply</button>
                             </form>
                     </div>
                     

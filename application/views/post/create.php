@@ -14,7 +14,7 @@
                     <hr>
                     <div class="create-wrapper">
                         <textarea name="body" class="form-control" placeholder="Your Message" row="10" id="create-post"></textarea>
-                        <button type="submit" value="Submit" class="btn btn-primary btn-submit float-right" style="margin: 10px;">Submit</button>
+                        <button type="submit" value="Submit" class="btn btn-primary w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0 btn-submit float-right" style="margin: 10px;">Submit <span><i class="far fa-plus-square"></i></span></button>
                     </div>
                 </form>              
             </div>
