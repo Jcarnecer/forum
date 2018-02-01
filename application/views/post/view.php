@@ -40,7 +40,7 @@
                     <div class="card space-between">
                         <div class="card-header">
                             <div class="forum-comments">
-                            <span class="d-inline-block font-weight-bold"><?= $thread['author'] ?></span>
+                            <span class="d-inline-block font-weight-bold"><?= $comment['author'] ?></span>
                                 <span class="text-muted"><?= $comment['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
                             </div>
                         </div>
