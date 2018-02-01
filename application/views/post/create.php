@@ -6,7 +6,7 @@
                      <span class="d-inline-block message-header">New Thread </span>
                 </div>
                 <div class="card-block title-wrapper">
-                    <form action="post/create" method="POST" class="message">
+                    <form action="post/create/<?=$project_id?>" method="POST" class="message">
                          <div class="form-group comment-form">
                             <input type="text" name="title" placeholder="Title" class="form-control" id="create-title"></input>
                          </div>

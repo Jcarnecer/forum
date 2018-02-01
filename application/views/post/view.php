@@ -29,29 +29,32 @@
                     </div>
                 </div> 
 
-                <?php foreach ($thread['comment'] as $comment): ?>
-                <div class="card space-between">
-                    <div class="card-header">
-                        <div class="forum-comments">
-                            <span class="text-muted"><?= $comment['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                <?php 
+                    if(isset($thread['reply']))
+                    foreach ($thread['reply'] as $comment):
+                ?>
+                    <div class="card space-between">
+                        <div class="card-header">
+                            <div class="forum-comments">
+                                <span class="text-muted"><?= $comment['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2 text-center">
-                                <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-3" aria-hidden="true"></i></span>
-                            </div>
-                            <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
-                                <div class="forum-content">
-                                    <?= $comment['body'] ?>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2 text-center">
+                                    <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-3" aria-hidden="true"></i></span>
                                 </div>
-                            </div>
-                        </div>                    
-                    </div>
-                    <div class="card-footer footer-reply">
-                        <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
-                    </div>
-                </div> 
+                                <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
+                                    <div class="forum-content">
+                                        <?= $comment['body'] ?>
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
+                        <div class="card-footer footer-reply">
+                            <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
+                        </div>
+                    </div> 
                 <?php endforeach; ?>
                 
 
