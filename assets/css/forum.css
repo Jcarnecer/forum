@@ -55,7 +55,7 @@
 
 
 .forum-title{
-    position: absolute;
+    position: relative;
     top: 10px;
     font-size: 15px;
 }
@@ -72,22 +72,23 @@
     text-align: center;
 }
 
-
 .right-content{
-    padding: 30px 20px;
+    float: left;
+    vertical-align: top;
 }
+
 
 .forum-content{
     white-space: pre-line;   
     width: 100%;
     font-size: 15px;
     font-weight: 200;
+    
 }
 .footer-reply{
     padding: 4px 10px;
     margin: 1px -1px 0;
     position: relative;
-
 }
 .btn-like,
 .btn-like:active,
@@ -151,7 +152,6 @@
 #create-post{
     resize: none;
     width: 1000px;
-    background-color:#dfe6e9;
     border:#EFEFEF solid 1px;
     height: 150px;  
 }

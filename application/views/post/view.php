@@ -16,19 +16,19 @@
                             </div>
                             <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
                                 <div class="font-weight-bold forum-title "><?= $thread['title'] ?></div>
-                                <div class="container">
-                                    <div class="forum-content">
-                                        <?= $thread['body'] ?>
+                                    <div class="container">
+                                        <div class="forum-content">
+                                            <?= $thread['body'] ?>
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                         </div>                    
                     </div>
                     <div class="card-footer footer-reply">
-                        <div class="d-flex flex-wrap w-100 p-0 m-0">
-                            <a href="#" class="btn btn-primary btn-like w-25 rounded-0 border border-top-0 border-bottom-0 border-left-0"><i class="far fa-thumbs-up"></i> Like</a>
-                            <a class="btn btn-primary btn-reply w-50 rounded-0 " href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
-                            <a href="" class="btn btn-primary btn-reply w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0"><i class="far fa-thumbs-down"></i> Dislike</a>
+                        <div class="d-flex justify-content-end w-100 p-0 m-0">
+                            <a href="#" class="btn btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0"> 0 <i class="far fa-thumbs-up"></i> Like</a>
+                            <a href="#" class="btn btn-primary btn-reply w-10 rounded-0"> 0 <i class="far fa-thumbs-down"></i> Dislike</a>
+                            <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-1" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
                         </div>
                     </div>
                 </div> 
@@ -57,10 +57,10 @@
                             </div>                    
                         </div>
                         <div class="card-footer footer-reply">
-                            <div class="d-flex flex-wrap w-100 p-0 m-0">
-                                <a href="#" class="btn btn-primary btn-like w-25 rounded-0 border border-top-0 border-bottom-0 border-left-0"><i class="far fa-thumbs-up"></i> Like</a>
-                                <a class="btn btn-primary btn-reply w-50 rounded-0 " href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
-                                <a href="#" class="btn btn-primary btn-reply w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0"><i class="far fa-thumbs-down"></i> Dislike</a>
+                            <div class="d-flex justify-content-end w-100 p-0 m-0">
+                                <a href="#" class="btn btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0"> 0 <i class="far fa-thumbs-up"></i> Like</a>
+                                <a href="#" class="btn btn-primary btn-reply w-10 rounded-0 "> 0 <i class="far fa-thumbs-down"></i> Dislike</a>
+                                <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-1" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
                             </div>
                         </div>
                     </div> 
@@ -78,7 +78,7 @@
                     <div class="card-block reply-wrapper">
                             <form action="post/reply/<?=$thread['id']?>" method="POST" role="form" class="message">
                                 <textarea name="body" class="form-control" id="reply-system" rows="10" placeholder="Message..."></textarea>
-                                <button type="submit" value="Post Reply" class="btn btn-primary btn-reply  w-25 rounded-0 border border-top-0 border-bottom-0 border-right-0 float-right" style="margin: 10px;"><span> <i class="far fa-paper-plane" aria-hidden="true"></i></span> Post Reply</button>
+                                <button type="submit" value="Post Reply" class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-0 float-right" style="margin: 10px;"><span> <i class="far fa-paper-plane" aria-hidden="true"></i></span> Post Reply</button>
                             </form>
                     </div>
                     
