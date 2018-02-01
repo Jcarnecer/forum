@@ -36,7 +36,7 @@
                 </div>
                 
                 <div class="card-footer">
-                    <a class="btn btn-primary btn-submit float-right" href="<?= base_url('post/create' . $project['id']) ?>"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Create New Thread</a>
+                    <a class="btn btn-primary btn-submit float-right" href="<?= base_url('post/create/' . $project['id']) ?>"><span> <i class="fa fa-plus" aria-hidden="true"></i></span> Create New Thread</a>
                 </div> 
             </div>
             
