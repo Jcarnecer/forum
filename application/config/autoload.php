@@ -139,8 +139,10 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = [
-	"Post_Model" => "post",
-	"Comment_Model" => "comment",
+	"Project_Model" => "project",
+	"Member_Model" => "member",
+	"Thread_Model" => "thread",
+	"Reply_Model" => "reply",
 	"User_Model" => "user",
 	"RolePermission_Model" => "role_permission"
 ];

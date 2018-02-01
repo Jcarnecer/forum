@@ -5,7 +5,7 @@
                 <h2 class="card-header">
                     <div class="profile-header">
                         <p class="d-inline-block"><?= $thread['author'] ?></p><br>
-                            <p class="text-muted"><?= $thread['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                            <p class="text-muted"><?= $thread['created_at'] ?> <i class="far fa-clock" aria-hidden="true"></i></p>
 
                     </div>
                 </h2>
@@ -28,12 +28,15 @@
                     <a class="btn btn-primary btn-reply float-right" href="#reply">Reply <span> <i class="fa fa-reply" aria-hidden="true"></i></span></a>
                 </div>
             </div>     
-            <?php foreach ($thread['comment'] as $comment): ?>
+            <?php 
+                if(isset($thread['reply']))
+                foreach ($thread['reply'] as $comment): 
+            ?>
             <div class="card space-between">
                 <h2 class="card-header">
                     <div class="profile-header">
                     <p class="d-inline-block"><?= $thread['author'] ?></p><br>
-                            <p class="text-muted"><?= $comment['created_at'] ?> <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                            <p class="text-muted"><?= $comment['created_at'] ?> <i class="far fa-clock" aria-hidden="true"></i></p>
 
                     </div>
                 </h2>

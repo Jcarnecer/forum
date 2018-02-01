@@ -14,22 +14,24 @@ class BaseController extends CI_Controller {
 		$data = [], 
 		$title = "PayakApps"
 	) {
-		$user = $this->current_user();
-
-		$this->load->view("partials/header", ["title" => $title]);
-		$this->load->view("partials/sidebar", ["user" => $user]);
-		$this->load->view($view, $data);
-		$this->load->view("partials/footer");
+		if($this->current_user()) {
+			$user = $this->current_user();
+			$sidebar['user'] = $user;
+			$sidebar['project'] = $this->session->project;
+			foreach ($this->member->with('project')->get_many_by(["user_id" => $user->id]) as $project) {
+				unset($project['project']['admin']);
+				unset($project['project']['company_id']);
+				$sidebar['projects'][] = $project['project'];
+			}
+			$this->load->view("partials/header", ["title" => $title]);
+			$this->load->view("partials/sidebar", $sidebar);
+			$this->load->view($view, $data ?? null);
+			$this->load->view("partials/footer");
+		} else {
+			redirect(LOGIN_URL);
+		}
 	}
-
-
-	public function login_page() 
-	{
-		$this->load->view("partials/header");
-		$this->load->view("users/login");
-		$this->load->view("partials/footer");
-	}
-
+	
 
 	public function guest_page(
 		$view, 
