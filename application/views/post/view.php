@@ -43,6 +43,7 @@
                             <div class="row">
                                 <div class="col-md-2 text-center">
                                     <span><img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail w-50 mt-3" aria-hidden="true"></i></span>
+                                    <span class="d-inline-block font-weight-bold"><?= $thread['author'] ?></span>
                                 </div>
                                 <div class="col-md-10 right-content border border-top-0 border-bottom-0 border-right-0">
                                     <div class="forum-content">
