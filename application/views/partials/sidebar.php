@@ -69,7 +69,7 @@
     </div>
     
     <div class="inner-content d-flex flex-column p-0">
-        <div class="d-flex w-100">
+        <div class="d-flex w-100 project-buttons">
             <a href="
                 <?php
                     if(ENVIRONMENT==="development") {
@@ -77,7 +77,7 @@
                     } else {
                         echo "http://task.payakapps.com/project/" . $project['id'];
                     }
-                ?>" class="btn btn-lg btn-primary w-50 rounded-0"><i class="fa fa-tasks"></i> Tasks</a>
-            <a href="<?= base_url('/project/' . $project['id']) ?>" onclick="javascript:void(0)" class="btn btn-lg btn-primary active w-50 rounded-0"><i class="fa fa-exchange-alt"></i> Forum</a>
+                ?>" class="btn btn-lg w-50 project-button rounded-0"><i class="fa fa-tasks"></i> Tasks</a>
+            <a href="<?= base_url('/project/' . $project['id']) ?>" onclick="javascript:void(0)" class="btn btn-lg project-button active w-50 rounded-0"><i class="fa fa-exchange-alt"></i> Forum</a>
         </div>
         <div class="h-100 w-100" style="overflow-y: auto;">
