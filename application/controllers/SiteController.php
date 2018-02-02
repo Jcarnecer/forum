@@ -12,17 +12,12 @@ class SiteController extends BaseController
 
 	public function index()
 	{
-		foreach ($this->thread->with('user')->get_all() as $post) {
-			$post["author"] = $post["user"]["first_name"] . ' ' . $post["user"]["last_name"];
-			unset($post["user_id"]);
-			unset($post["deleted"]);
-			unset($post["company_id"]);
-			unset($post["user"]);
-			$data['posts'][] = $post;
-		}
 		if (parent::current_user()) {
 			parent::main_page("dashboard");
-			redirect('post');
+			if(ENVIRONMENT === 'development')
+				redirect('http://localhost/task');
+			else
+				redirect('http://task.payakapps.com');
 		} else {
 			redirect(LOGIN_URL);
 		}
