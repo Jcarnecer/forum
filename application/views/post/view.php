@@ -1,4 +1,4 @@
-<div class="container">
+<div id="forumView" class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="background-forum">
@@ -28,7 +28,7 @@
                         <div class="d-flex justify-content-end w-100 p-0 m-0">
                             <a href="#" class="btn btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0"> 0 <i class="far fa-thumbs-up"></i> Like</a>
                             <a href="#" class="btn btn-primary btn-reply w-10 rounded-0"> 0 <i class="far fa-thumbs-down"></i> Dislike</a>
-                            <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-1" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                            <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-1" href="<?= base_url(uri_string()) ?>#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
                         </div>
                     </div> -->
                 </div> 
