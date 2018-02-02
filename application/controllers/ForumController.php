@@ -45,6 +45,10 @@ class ForumController extends BaseController
         	unset($comment['user_id']);
         	unset($comment['deleted']);
         	unset($comment['thread_id']);
+        	
+        	$comment['likes'] = $this->reaction->count_by(['reply_id' => $comment['id'], 'like' => 1]);
+        	$comment['dislikes'] = $this->reaction->count_by(['reply_id' => $comment['id'], 'like' => 2]);
+        	// return print_r($comment);
         	$data['thread']['reply'][$key] = $comment;
         }
 
@@ -104,5 +108,28 @@ class ForumController extends BaseController
 		}
 		
 		return $this->output->set_output(json_encode(['data' => $data]));
+	}
+
+
+	public function react(){
+
+		$reply_id = $this->input->post('reply_id');
+		$like = $this->input->post('like');
+		$user_id = parent::current_user()->id;
+		$check = $this->reaction->get_by(['reply_id' => $reply_id, 'user_id' => $user_id]);
+		if(isset($check)) {
+			if($check['like'] == $like)
+				$this->reaction->delete($check['id']);
+			else
+				$this->reaction->update($check['id'], ['like' => $like]);
+		} else {
+
+			$data = [
+				'reply_id'	=> $reply_id,
+				'user_id'	=> $user_id,
+				'like'		=> $like
+			];
+			$this->reaction->insert($data);
+		}
 	}
 }

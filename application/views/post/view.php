@@ -58,8 +58,8 @@
                         </div>
                         <div class="card-footer footer-reply">
                             <div class="d-flex justify-content-end w-100 p-0 m-0">
-                                <button class="btn btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0" onclick="onLike(event)">0<i class="far fa-thumbs-up mx-2"></i>Like</button>
-                                <button class="btn btn-primary btn-reply w-10 rounded-0 " onclick="onDislike(event)">0<i class="far fa-thumbs-down mx-2"></i>Dislike</button>
+                                <button class="btn btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0" onclick="onLike(event)"><?= $comment['likes'] == 0 ? '' : $comment['likes'] ?><i class="far fa-thumbs-up mx-2"></i>Like</button>
+                                <button class="btn btn-primary btn-reply w-10 rounded-0 " onclick="onDislike(event)"><?= $comment['dislikes'] == 0 ? '' : $comment['dislikes'] ?><i class="far fa-thumbs-down mx-2"></i>Dislike</button>
                                 <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-1" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
                             </div>
                         </div>
