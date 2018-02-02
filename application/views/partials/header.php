@@ -24,5 +24,7 @@
 		<script src="assets/js/script.js"></script>
         <!-- Custom js	-->
         <script src="assets/js/custom.js"></script>
+        <script src="assets/js/api.js"></script>
+        <script src="assets/js/post.js"></script>
 	</head>
 	<body>

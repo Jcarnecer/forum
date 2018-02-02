@@ -144,5 +144,6 @@ $autoload['model'] = [
 	"Thread_Model" => "thread",
 	"Reply_Model" => "reply",
 	"User_Model" => "user",
-	"RolePermission_Model" => "role_permission"
+	"RolePermission_Model" => "role_permission",
+	"Reaction_Model" => "reaction"
 ];
