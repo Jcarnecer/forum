@@ -193,3 +193,10 @@
     border: 0;
     color: #353b48;;
 }
+
+.footer-reply button,
+.footer-reply button.active,
+.footer-reply button:active,
+.footer-reply button:focus{
+    outline: none !important;
+}

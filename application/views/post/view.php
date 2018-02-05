@@ -57,10 +57,16 @@
                             </div>                    
                         </div>
                         <div class="card-footer footer-reply">
-                            <div class="d-flex justify-content-end w-100 p-0 m-0">
-                                <button class="btn btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0" onclick="onLike(event)"><?= $comment['likes'] == 0 ? '' : $comment['likes'] ?><i class="far fa-thumbs-up mx-2"></i>Like</button>
-                                <button class="btn btn-primary btn-reply w-10 rounded-0 " onclick="onDislike(event)"><?= $comment['dislikes'] == 0 ? '' : $comment['dislikes'] ?><i class="far fa-thumbs-down mx-2"></i>Dislike</button>
-                                <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-1" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                            <div class="btn-group rounded-0 border p-0 my-0 float-right">
+                                <button class="btn btn-react btn-like w-10 rounded-0 border border-top-0 border-bottom-0 border-left-0 <?= $comment['react'] == 1 ? 'bg-success text-white active' : '' ?>" onclick="onLike(event)">
+                                    <span class="like-count"><?= $comment['likes'] == 0 ? '' : $comment['likes'] ?></span>
+                                    <i class="fa fa-thumbs-up mx-2"></i>Like
+                                </button>
+                                <button class="btn btn-react btn-primary btn-reply w-10 rounded-0 <?= $comment['react'] == 2 ? 'bg-danger text-white active' : '' ?>" onclick="onDislike(event)">
+                                    <span class="dislike-count"><?= $comment['dislikes'] == 0 ? '' : $comment['dislikes'] ?></span>
+                                    <i class="fa fa-thumbs-down mx-2"></i>Dislike
+                                </button>
+                                <a class="btn btn-primary btn-reply w-10 rounded-0 border border-top-0 border-bottom-0 border-right-0" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
                             </div>
                         </div>
                     </div> 
