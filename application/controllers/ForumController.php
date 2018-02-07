@@ -45,6 +45,11 @@ class ForumController extends BaseController
         	unset($comment['user_id']);
         	unset($comment['deleted']);
         	unset($comment['thread_id']);
+        	
+        	$comment['likes'] = $this->reaction->count_by(['reply_id' => $comment['id'], 'like' => 1]);
+        	$comment['dislikes'] = $this->reaction->count_by(['reply_id' => $comment['id'], 'like' => 2]);
+        	$comment['react'] = $this->reaction->get_by(['reply_id' => $comment['id'], 'user_id' => parent::current_user()->id])['like'];
+        	// return print_r($comment);
         	$data['thread']['reply'][$key] = $comment;
         }
 
@@ -61,8 +66,8 @@ class ForumController extends BaseController
 	public function create($id) {
 		
 		$data = [
-			'title' => $this->input->post('title'),
-			'body' => $this->input->post('body'),
+			'title' => strip_tags($this->input->post('title')),
+			'body' => strip_tags($this->input->post('body')),
 			'user_id' => parent::current_user()->id,
 			'project_id' => $id
 		];
@@ -81,7 +86,7 @@ class ForumController extends BaseController
 	public function create_reply($id) {
 
 		$data = [
-			'body' => $this->input->post('body'),
+			'body' => strip_tags($this->input->post('body')),
 			'user_id' => parent::current_user()->id,
 			'thread_id' => $id
 		];
@@ -104,5 +109,34 @@ class ForumController extends BaseController
 		}
 		
 		return $this->output->set_output(json_encode(['data' => $data]));
+	}
+
+
+	public function react(){
+
+		$reply_id = $this->input->post('reply_id');
+		$like = $this->input->post('like');
+		$user_id = parent::current_user()->id;
+		$check = $this->reaction->get_by(['reply_id' => $reply_id, 'user_id' => $user_id]);
+
+		if(isset($check)) {
+			if($check['like'] == $like)
+				$data['status'] = $this->reaction->delete($check['id']);
+			else
+				$data['status'] = $this->reaction->update($check['id'], ['like' => $like]);
+		} else {
+
+			$data = [
+				'reply_id'	=> $reply_id,
+				'user_id'	=> $user_id,
+				'like'		=> $like
+			];
+			$data['status'] = $this->reaction->insert($data);
+		}
+
+		$data['like_count'] 	= count($this->reaction->get_many_by(['reply_id' => $reply_id, 'like' => 1]));
+		$data['dislike_count'] 	= count($this->reaction->get_many_by(['reply_id' => $reply_id, 'like' => 2]));
+
+		echo json_encode($data);
 	}
 }
