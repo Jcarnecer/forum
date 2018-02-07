@@ -62,4 +62,18 @@ class BaseController extends CI_Controller {
 		$current_user = $this->current_user();
 		return $current_user and in_array($permission, $current_user->permissions);
 	}
+
+
+	public function log_activity($subject_user, $action, $object_user, $object, $created_at) {
+		
+		$data = [
+			'subject_user'	=> $subject_user,
+			'action'		=> $action,
+			'object_user'	=> $object_user,
+			'object'		=> $object,
+			'created_at'	=> $created_at
+		];
+
+		$this->activity_log->insert($data);
+	}
 }

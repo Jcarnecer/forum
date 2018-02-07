@@ -66,9 +66,11 @@ class ForumController extends BaseController
 			'user_id' => parent::current_user()->id,
 			'project_id' => $id
 		];
-		$id = $this->thread->insert($data);
-
-		return redirect("post/view/" . $id);
+		$ref = $this->thread->insert($data);
+		
+		parent::log_activity(parent::current_user()->id, 'created a new thread', $ref, $this->thread->get($ref)['created_at']);
+		
+		return redirect("post/view/" . $ref);
 	}
 
 	public function delete() {
@@ -85,8 +87,11 @@ class ForumController extends BaseController
 			'user_id' => parent::current_user()->id,
 			'thread_id' => $id
 		];
-		$this->reply->insert($data);
+		
+		$ref = $this->reply->insert($data);
 
+		parent::log_activity(parent::current_user()->id, 'replied to a thread', $ref, $this->reply->get($ref)['created_at']);
+		
 		return redirect("post/view/$id");
 	}
 
