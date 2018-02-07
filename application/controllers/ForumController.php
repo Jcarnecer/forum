@@ -48,7 +48,7 @@ class ForumController extends BaseController
         	
         	$comment['likes'] = $this->reaction->count_by(['reply_id' => $comment['id'], 'like' => 1]);
         	$comment['dislikes'] = $this->reaction->count_by(['reply_id' => $comment['id'], 'like' => 2]);
-        	$comment['react'] = $this->reaction->get_by(['reply_id' => $comment['id'], 'user_id' => $author['id']])['like'];
+        	$comment['react'] = $this->reaction->get_by(['reply_id' => $comment['id'], 'user_id' => parent::current_user()->id])['like'];
         	// return print_r($comment);
         	$data['thread']['reply'][$key] = $comment;
         }
