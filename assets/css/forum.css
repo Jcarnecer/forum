@@ -101,10 +101,6 @@
     background-color: #ffffff;
     border: 0;
     color: #353b48;
-    transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -webkit-transition: all 1s;
 }
 .btn-like:hover,
 .btn-reply:hover{
