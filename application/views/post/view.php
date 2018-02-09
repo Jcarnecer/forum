@@ -60,7 +60,7 @@
                                 <span class="dislike-count"><?= $comment['dislikes'] == 0 ? '' : $comment['dislikes'] ?></span>
                                 <i class="fa fa-thumbs-down mx-2"></i>Dislike
                             </button>
-                            <a class="btn btn-reply w-10" href="#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
+                            <a class="btn btn-reply w-10" href="<?= base_url(uri_string()) ?>#reply"><span> <i class="fa fa-reply" aria-hidden="true"></i> Reply</span></a>
                         </div>
                     </div>
                 </div> 
