@@ -39,7 +39,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-2 text-center">
-                                <img src="<?= $thread['avatar_url'] ?>" class="img-thumbnail d-block w-50 mt-3 mx-auto" aria-hidden="true">
+                                <img src="<?= $comment['author_avatar'] ?>" class="img-thumbnail d-block w-50 mt-3 mx-auto" aria-hidden="true">
                                 <?= $comment['author'] ?>
                             </div>
                             <div class="col-md-10 border border-top-0 border-bottom-0 border-right-0">
