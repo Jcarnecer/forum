@@ -42,6 +42,7 @@ class ForumController extends BaseController
         
         	$author = $this->user->get($comment['user_id']);
         	$comment['author'] = $author['first_name'] . " " . $author['last_name'];
+        	$comment['author_avatar'] = $author['avatar_url'];
         	unset($comment['user_id']);
         	unset($comment['deleted']);
         	unset($comment['thread_id']);
