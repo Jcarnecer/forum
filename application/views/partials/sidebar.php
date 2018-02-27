@@ -84,7 +84,7 @@
                 <a href="<?= base_url('/project/' . $project['id']) ?>" onclick="javascript:void(0)" class="nav-link secondary-button active"><i class="fa fa-exchange-alt"></i> Discussion</a>
             </li>
             <li class="nav-item w-100">
-                <a href="<?= ENVIRONMENT === 'development' ? 'http://localhost/files/project/' . $project['id'] : 'http://files.payakapps.com//project/' . $project['id'] ?>" class="nav-link secondary-button"  role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file"></i> Files</a>
+                <a href="<?= ENVIRONMENT === 'development' ? 'http://localhost/file/project/' . $project['id'] : 'http://files.payakapps.com//project/' . $project['id'] ?>" class="nav-link secondary-button"  role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file"></i> Files</a>
             </li>
         </ul>
 
