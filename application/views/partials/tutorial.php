@@ -17,7 +17,7 @@
                             <img src="<?= base_url('assets/tutorial/thread.png') ?>" alt="Dashboard" class="rounded-0 card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Threads</h5>
-                                <p class="card-text">Threads are discussions of specific topics in scope of the project.</p>
+                                <p class="card-text">Threads are discussions of specific topics within scope of the project.</p>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                             <img src="<?= base_url('assets/tutorial/create.png') ?>" alt="Dashboard" class="rounded-0 card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Creating Thread</h5>
-                                <p class="card-text">Create a thread to discuss a particular topic. Add a short description of what will be the thread all about.</p>
+                                <p class="card-text">Create a thread to discuss a particular topic. Add a short description of what is the thread all about.</p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             <img src="<?= base_url('assets/tutorial/reply.png') ?>" alt="Dashboard" class="rounded-0 card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Replying to Thread</h5>
-                                <p class="card-text">Each project member can share ideas and solution by replying to a thread.</p>
+                                <p class="card-text">Each project member can share ideas and solutions by replying to a thread.</p>
                             </div>
                         </div>
                     </div>
