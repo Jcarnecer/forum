@@ -26,10 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 switch(ENVIRONMENT) {
 
 	case 'production':
-		$config['base_url'] = 'http://forum.payakapps.com/';
+		$config['base_url'] = 'https://forum.payakapps.com/';
 		break;
 	case 'testing':
-		$config['base_url'] = 'http://stage.payakapps.com/';
+		$config['base_url'] = 'https://stage.payakapps.com/';
 		break;
 	default:
 		$config['base_url'] = 'http://localhost/forum/';
