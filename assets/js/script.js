@@ -1,6 +1,6 @@
 switch(window.location.origin){
-    case 'http://forum.payakapps.com': var baseUrl = 'http://forum.payakapps.com/'; break;
-    case 'http://stage.payakapps.com': var baseUrl = 'http://stage.payakapps.com/'; break;
+    case 'https://forum.payakapps.com': var baseUrl = 'https://forum.payakapps.com/'; break;
+    case 'https://stage.payakapps.com': var baseUrl = 'https://stage.payakapps.com/'; break;
     default: var baseUrl = 'http://localhost/forum/'; break;
 }
 
